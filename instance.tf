@@ -13,5 +13,5 @@ resource "aws_instance" "ms_web_server" {
 
 resource "aws_key_pair" "terraformawskey" {
   key_name   = "terraformawskey"
-  public_key = file("~/.ssh/terraformawskey.pub")
+  public_key = file("${var.PUB_KEY}")
 }
