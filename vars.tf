@@ -1,3 +1,4 @@
+variable "AWS_CREDENTIALS" {} #empty to prevent uploading secrets
 variable "VSCODE_PROFILE" {} #empty to prevent uploading secrets
 variable "AWS_REGION" {
     type = string
