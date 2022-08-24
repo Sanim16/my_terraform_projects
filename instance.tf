@@ -1,6 +1,6 @@
 resource "aws_instance" "ms_web_server" {
   #ami           = data.aws_ami.ubuntu.id
-  ami = "ami-0a24ce26f4e187f9a"
+  ami = "${lookup(var.AMIS, var.AWS_REGION)}" #selects the AMI based on AWS region
   instance_type = "t2.micro"
   associate_public_ip_address = true
   key_name = "${var.KEY_PAIR}"
