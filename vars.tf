@@ -15,5 +15,6 @@ variable "AMIS" {
 }
 variable "KEY_PAIR" {} #empty to prevent uploading secrets
 variable "PUB_KEY" {} #public key used for key pair creation
+variable "PRIVATE_KEY" {} #public key used for key pair creation
 variable "AWS_KEY" {}
 variable "AWS_SECRET_KEY" {}

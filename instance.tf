@@ -6,6 +6,24 @@ resource "aws_instance" "ms_web_server" {
   key_name = "${var.KEY_PAIR}"
   user_data = file("user-data.sh")
 
+##Using a provisioner to copy a file and run some scripts
+  # provisioner "file" {
+  #   source = "script.sh"
+  #   destination = "/tmp/script.sh"
+  # }
+
+  # provisioner "remote-exec" {
+  #   inline = [
+  #     "chmod 777 /tmp/script.sh",
+  #     "/tmp/script.sh"
+  #   ]
+  # }
+  # connection {
+  #   user = "ubuntu"
+  #   private_key = file("${var.PRIVATE_KEY}")
+  #   host = self.public_ip
+  # }
+
   tags = {
     Name = "MS_Server"
   }
