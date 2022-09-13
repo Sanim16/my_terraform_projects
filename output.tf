@@ -1,4 +1,11 @@
-output "IP" {
-  value = aws_instance.ms_web_server.public_ip
-  description = "The public IP of the instance"
+output "DB-ADDRESS" {
+  value = aws_db_instance.mysql-db.address
+}
+
+output "PUBLIC-ALB" {
+  value = aws_lb.alb-01.dns_name
+}
+
+output "PRIVATE-ALB" {
+  value = aws_lb.alb-02.dns_name
 }
